@@ -98,7 +98,7 @@ namespace OBOToolsWebServer.Scripts.Logic.PaymentCorrection
         public static double Sum(string inputString)
         {
             if (String.IsNullOrEmpty(inputString))
-                inputString = "0000000";
+                inputString = "0";
 
             if (inputString.Contains('.'))
                 inputString = inputString.Replace('.', ',');

@@ -52,9 +52,9 @@ namespace OBOToolsWebServer.Scripts.Logic.PaymentCorrection
             BCVariantCLB = dataListIn[2];
             correctNumber = dataListIn[3];
             incorrectNumber = dataListIn[4];
-            paymentSum = Convert.ToDouble(dataListIn[5]);
+            paymentSum = Convert.ToDouble(NormalizeStrings.Sum(dataListIn[5]));
             paymentDate = dataListIn[6];
-            correctionSum = Convert.ToDouble(dataListIn[7]);
+            correctionSum = Convert.ToDouble(NormalizeStrings.Sum(dataListIn[7]));
             sourceTicket = dataListIn[8];
             refusedCorrectionCB = NormalizeStrings.Bool(dataListIn[9]);
             incorrectTicket = NormalizeStrings.Bool(dataListIn[10]);
@@ -69,9 +69,7 @@ namespace OBOToolsWebServer.Scripts.Logic.PaymentCorrection
             BCVariantCLB = NormalizeStrings.BCVariant();
             correctNumber = NormalizeStrings.Number(correctNumber);
             incorrectNumber = NormalizeStrings.Number(incorrectNumber);
-            paymentSum = NormalizeStrings.Sum(paymentSum.ToString());
             paymentDate = NormalizeStrings.Date(paymentDate);
-            correctionSum = NormalizeStrings.Sum(correctionSum.ToString());
             sourceTicket = NormalizeStrings.SourceTicket();
         }
 
