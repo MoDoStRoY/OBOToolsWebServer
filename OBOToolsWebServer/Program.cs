@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using OBOToolsWebServer.Config.Objects.System;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace OBOToolsWebServer
 {
     public class Program
     {
+        public static Server server = new Server();
+
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
